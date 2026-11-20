@@ -1,0 +1,6 @@
+(function(E){'use strict';
+const gems=['smoky quartz','river pearl','green tourmaline','amber tear','blue spinel','moonstone','star ruby','black opal','fire agate','sunstone','pale sapphire','blood garnet','dawn diamond'];const jewels=['silver torque','engraved signet','golden reliquary','jade comb','amber cup','crystal astrolabe','copper moon pendant','old crown shard'];
+const treasure={gems,jewels,types:{A:{coins:[100,600],chance:.7,magic:.3},B:{coins:[50,300],chance:.6,magic:.2},C:{coins:[10,100],chance:.5,magic:.15},D:{coins:[100,400],chance:.5,magic:.25},E:{coins:[1,20],chance:.25,magic:.1},F:{coins:[200,1200],chance:.75,magic:.4},G:{coins:[500,2000],chance:.8,magic:.5},H:{coins:[1000,6000],chance:.9,magic:.6},I:{coins:[10,1000],chance:.6,magic:.35}},
+roll(level=1,type='C',rng=Math.random){let t=this.types[type]||this.types.C,items=[],gold=Math.floor((t.coins[0]+rng()*(t.coins[1]-t.coins[0]))*Math.max(1,level*.6));if(rng()<.32+level*.025)items.push(`${1+Math.floor(rng()*3)} ${gems[Math.floor(rng()*gems.length)]}${rng()<.4?'s':''}`);if(rng()<.16+level*.018)items.push(jewels[Math.floor(rng()*jewels.length)]);if(rng()<t.magic)items.push(E.Util.pick(E.Data.items.filter(i=>i.type==='potion'||i.type==='scroll'||i.type==='weapon'),rng).name);return {gold,items}}};
+E.Treasure=treasure;
+})(window.Emberfall=window.Emberfall||{});

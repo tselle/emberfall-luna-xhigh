@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#11151a">
+  <title>Emberfall: The Emberwild Saga</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" aria-label="Emberfall adventure game">
+    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span><span>EMBERFALL</span><small>THE EMBERWILD SAGA</small></div><div class="top-status"><span id="place-label">Thornwick</span><span id="clock-label">Day 1 · Morning</span><button id="menu-button" aria-label="Open menu">☰</button></div></header>
+    <section class="game-layout">
+      <section class="viewport-panel"><div class="scene-wrap"><canvas id="scene" aria-label="First-person view"></canvas><div id="scene-caption" class="scene-caption">A quiet morning settles over Thornwick.</div><div id="toast" class="toast" aria-live="polite"></div></div><div class="view-tools"><button data-action="search">⌕ <span>Search</span></button><button data-action="camp">☽ <span>Camp</span></button><button data-action="map">▦ <span>Map</span></button><button data-action="journal">✎ <span>Journal</span></button><button data-action="bestiary">♧ <span>Bestiary</span></button><button data-action="party">♙ <span>Company</span></button></div><div class="minimap-wrap"><canvas id="minimap" aria-label="Local map"></canvas><div><b id="area-label">Thornwick</b><small>WASD / arrows to move · Q/E sidestep</small></div></div></section>
+      <aside class="side-panel"><div class="panel-heading"><div><small>YOUR COMPANY</small><h2>Emberbound</h2></div><button id="save-button" class="quiet-button">Save</button></div><div id="party-list" class="party-list"></div><div class="quest-card"><small>ACTIVE COMMISSION</small><h3 id="quest-title">The Cellars Below</h3><p id="quest-summary">Find the source of the scratching beneath the old cooperage.</p><div class="quest-progress"><span id="quest-progress"></span></div><small id="objective-label">Explore Thornwick</small></div><div class="log-card"><div class="card-title"><small>FIELD NOTES</small><button id="clear-log" class="text-button">Clear</button></div><div id="event-log" class="event-log" aria-live="polite"></div></div><div class="side-footer"><span id="gold-label">◈ 120 gp</span><span id="xp-label">0 XP earned</span></div></aside>
+    </section>
+    <nav class="command-bar" aria-label="Game commands"><button data-action="forward"><i>↑</i>Forward</button><button data-action="left"><i>↶</i>Turn left</button><button data-action="right"><i>↷</i>Turn right</button><button data-action="interact"><i>◈</i>Interact</button><button data-action="overland"><i>⌖</i>Travel</button><button data-action="menu"><i>☰</i>Menu</button></nav>
+    <div id="modal-root"></div>
+    <div id="touch-pad" class="touch-pad" aria-label="Movement controls"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div>
+    <footer class="page-footer">A tale of the Emberwild · Original fantasy adventure</footer>
+  </main>
+  <script src="rules.js"></script><script src="data.js"></script><script src="modules.js"></script><script src="monsters.js"></script><script src="wilds.js"></script><script src="treasure.js"></script><script src="adventures.js"></script><script src="figures.js"></script><script src="view3d.js"></script><script src="ui.js"></script><script src="combat.js"></script><script src="overland.js"></script><script src="campaign.js"></script><script src="journal.js"></script><script src="map.js"></script><script src="bestiary.js"></script><script src="navpad.js"></script><script src="watch.js"></script><script src="game.js"></script>
+</body>
+</html>

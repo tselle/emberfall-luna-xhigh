@@ -1,0 +1,3 @@
+(function(E){'use strict';
+E.Bestiary={open(){let met=Object.keys(E.State.seenMonsters),cards=met.map(id=>{let m=E.Monsters.byId[id];return m?`<div class="modal-card"><h3>${m.name}</h3><p>${m.description}</p><small>HD ${m.hd} · AC ${m.ac} · ${m.special.join(', ')||'no known special abilities'}</small></div>`:''}).join('');E.UI.modal('Bestiary',`${met.length} of ${E.Monsters.list.length} creatures encountered. Entries fill in as you meet and fight them.`,`<div class="modal-grid">${cards||'<div class="modal-card"><h3>Blank leaves</h3><p>The company has not yet identified any creatures. The wilds are full of unknown things.</p></div>'}</div>`)} };
+})(window.Emberfall=window.Emberfall||{});

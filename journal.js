@@ -1,0 +1,3 @@
+(function(E){'use strict';
+E.Journal={open(){let s=E.State,notes=s.journal.map(n=>`<div class="log-entry"><time>DAY ${n.day} · ${String(n.hour).padStart(2,'0')}:00</time>${n.text}</div>`).join('')||'<p>No notes have been made yet.</p>';E.UI.modal('Company journal',`Day ${s.day} of the Emberwild journey.`,`<div class="modal-card"><h3>${s.quest.title}</h3><p>${s.quest.summary}<br><b>Current objective:</b> ${s.quest.objective}</p><div class="quest-progress"><span style="width:${s.quest.progress}%"></span></div></div><div style="max-height:45vh;overflow:auto;margin-top:12px">${notes}</div>`)} };
+})(window.Emberfall=window.Emberfall||{});
